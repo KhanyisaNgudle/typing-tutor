@@ -14,10 +14,32 @@ header {
     font-weight: bold;
 }
 
-.text-container h4{
+.text-container{
+    display: grid;
+    text-align: left;
     padding: 10px;
     background-color: white;
     color: black;
+    grid-template-areas:
+    'question question speed'
+    'question question accuracy';
+    margin-bottom: 20px;
+}
+
+.question {
+    grid-area: question;
+}
+
+.speed {
+    padding: 10px;
+    background-color: red;
+    grid-area: speed;
+}
+
+.accuracy {
+    padding: 10px;
+    background-color: blue;
+    grid-area: accuracy;
 }
 
 #user-input {
