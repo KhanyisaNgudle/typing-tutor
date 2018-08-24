@@ -3,15 +3,25 @@ body {
     background-color: lightgray;
 }
 
+textarea {
+    background-color: #fff;
+    border-radius: 10px;
+    border: .5px solid gray;
+    padding: 1%;
+}
+
 header {
     width: 100%;
     padding: 3px;
     background-color: dodgerblue;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     color:white;
     text-align: left;
-    padding-left: 2%;
-    font-weight: bold;
+    padding-left: 5%;
+}
+
+h1 {
+    font-weight: bolder;
 }
 
 .text-container{
@@ -24,6 +34,7 @@ header {
     'question question speed'
     'question question accuracy';
     margin-bottom: 20px;
+    border-radius: 15px;
 }
 
 .question {
@@ -32,13 +43,16 @@ header {
 
 .speed {
     padding: 10px;
-    background-color: red;
+    background-color: dodgerblue;
+    color: #fff;
     grid-area: speed;
+    margin-bottom: 10px;
 }
 
 .accuracy {
     padding: 10px;
-    background-color: blue;
+    background-color: dodgerblue;
+    color: #fff;
     grid-area: accuracy;
 }
 
@@ -52,4 +66,35 @@ header {
 
 span {
     display: block;
+}
+
+.jumbotron {
+    position: relative;
+    z-index: 0;
+    border-radius: 23px;
+}
+
+/* Results */
+
+.results {
+    width: 100%;
+    top:40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+    background-color: rgba(252, 248, 248, 0.929);
+    padding: 10px;
+    margin: auto;
+    position: absolute;
+    z-index: 1;
+    display: none;
+    box-shadow: 1px 2px 3px 1px gray;
+}
+
+.btn {
+    margin-right: 1%;
+    color: #fff;
+}
+
+.btns {
+    color: #fff;
 }
