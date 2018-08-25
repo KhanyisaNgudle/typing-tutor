@@ -17,10 +17,13 @@ function check_input(val) {
         active = setInterval(count, 1000);
     }
     
-    
+    // if input is a space
     if (par.substring(0, [len]) === val.value.substring(0, [len])) {
         val.style.backgroundColor = "rgba(39, 238, 39, 0.562)";
         isGreen = 1;
+        if (val.value[len - 1] === " " || len == 0)
+            highlight(len);
+        document.getElementsByTagName('mark')[0].style.backgroundColor = "rgba(39, 238, 39, 0.562)";
     }
     else {
         val.style.backgroundColor = "rgba(230, 33, 7, 0.562)";
@@ -30,6 +33,7 @@ function check_input(val) {
             document.getElementById('accuracy').innerHTML = "Accuracy: " + accuracy + "%";
         }
         isGreen = 0;
+        document.getElementsByTagName('mark')[0].style.backgroundColor = "red";
     }
     // check if user is done typing
     if (par == val.value){
@@ -63,4 +67,16 @@ function count() {
 
 function closeResults(){
     document.getElementById('results').style.display = "none";
+}
+
+// highlight
+
+function highlight(i) {
+    var text = document.getElementById('question');
+    var newPar = par.substring(i, par.length);
+    var ind = newPar.split(' ');
+    console.log(ind[0]);
+    newPar = newPar.substring(ind[0].length, par.length);
+
+    text.innerHTML = par.substring(0, i) + "<mark>" + ind[0] + "</mark>" + newPar;
 }
