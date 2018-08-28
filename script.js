@@ -61,8 +61,9 @@ function countWords(word) {
 
 var cnt = 0;
 function count() {
-    document.getElementById('speed').innerHTML = " speed: " + cnt + " sec" + " words: " + parWordCount;
     cnt++;
+    document.getElementById('speed').innerHTML = "Speed: " + ((document.getElementById('user-input').value.length/cnt) * 100).toFixed(0) + " wpm";
+    
 }
 
 function closeResults(){

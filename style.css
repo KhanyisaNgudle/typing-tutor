@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: lightgray;
+    background-color: whitesmoke;
 }
 
 textarea {
@@ -10,19 +10,97 @@ textarea {
     padding: 1%;
 }
 
+/* Section A */
+
+.section-a {
+    width: 100%;
+    height: 450px;
+    background-image: url('https://images.pexels.com/photos/1001753/pexels-photo-1001753.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+    background-size: cover;
+    background-position: bottom;
+    position: relative;
+    margin-bottom: 25px;
+    /*clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);*/
+}
+
 header {
     width: 100%;
-    padding: 3px;
-    background-color: dodgerblue;
-    margin-bottom: 25px;
     color:white;
     text-align: left;
-    padding-left: 5%;
+    position: relative;
+    z-index: 1;
+    height: 55px;
+}
+
+.back {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: .7;
+}
+
+.menu {
+    width: 100%;
+    padding-left: 5vw;
+    position: absolute;
+    z-index: 1;
+    top: 0;
+}
+
+.logo {
+    display: inline-block;
+    padding-right:65vw;
+}
+
+.options {
+    display: inline-block;
+    top: 50%;
+    transform: translate(0, -15%);
+}
+
+.options .btn-primary {
+    background-color:transparent;
+    border: .5px solid white;
 }
 
 h1 {
     font-weight: bolder;
 }
+
+.image {
+    position: absolute;
+    width: 100%;
+    height: 395px;
+    background-color: black;
+    opacity: .5;
+}
+
+.text {
+    color: #fff;
+    position: absolute;
+    z-index: 1;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -40%);
+}
+
+.text h1{
+    font-family: 'Times New Roman', Times, serif;
+    text-transform: uppercase;
+    letter-spacing: .2em;
+    font-weight: bolder;
+    font-size: 3.5em;
+    opacity: .96;
+}
+
+.text p {
+    text-transform:uppercase;
+    opacity: .7;
+    letter-spacing: .4em;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+}
+
 
 .text-container{
     display: grid;
@@ -39,20 +117,24 @@ h1 {
 
 .question {
     grid-area: question;
+    padding: 20px;
+}
+
+.stats {
+    margin-left: 20px;
+    color: gray;
+    text-align: right;
 }
 
 .speed {
+    margin-top: 20px;
     padding: 10px;
-    background-color: dodgerblue;
-    color: #fff;
     grid-area: speed;
     margin-bottom: 10px;
 }
 
 .accuracy {
     padding: 10px;
-    background-color: dodgerblue;
-    color: #fff;
     grid-area: accuracy;
 }
 
@@ -68,10 +150,16 @@ span {
     display: block;
 }
 
+.band {
+    width: 100%;
+}
+
 .jumbotron {
     position: relative;
     z-index: 0;
     border-radius: 23px;
+    box-shadow: 1px 1px 6px 1px;
+    background-color: whitesmoke;
 }
 
 /* Results */
@@ -92,7 +180,6 @@ span {
 
 .btn {
     margin-right: 1%;
-    color: #fff;
 }
 
 .btns {
