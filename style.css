@@ -1,6 +1,6 @@
 body {
     text-align: center;
-    background-color: whitesmoke;
+    background-color: dodgerblue;
 }
 
 textarea {
@@ -19,7 +19,7 @@ textarea {
     background-size: cover;
     background-position: bottom;
     position: relative;
-    margin-bottom: 25px;
+    
     /*clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);*/
 }
 
@@ -101,7 +101,20 @@ h1 {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.container {
+    width: 75%;
+}
 
+/* Board */
+
+.board {
+    width: 100%;
+    height: 50px;
+    background-color: dodgerblue;
+    margin-bottom: 25px;
+}
+
+/* Container  */
 .text-container{
     display: grid;
     text-align: left;

@@ -47,8 +47,9 @@ function check_input(val) {
 }
 
 function showResults() {
+    speed = ((parWordCount/cnt) * 100).toFixed(0);
     document.getElementById('results').style.display = "block";
-    document.getElementById('resSpeed').innerHTML = "Your speed: " + ((parWordCount/cnt) * 100).toFixed(0) + " words per minute";
+    document.getElementById('resSpeed').innerHTML = "Your speed: " + speed + " words per minute";
     document.getElementById('resAccuracy').innerHTML = "Accuracy: " + accuracy + "%";
 }
 
@@ -80,4 +81,21 @@ function highlight(i) {
     newPar = newPar.substring(ind[0].length, par.length);
 
     text.innerHTML = par.substring(0, i) + "<mark>" + ind[0] + "</mark>" + newPar;
+}
+
+// save results
+
+function saveResults(){
+    var username = document.getElementById('username').value;
+    var province = document.getElementById('province').value;
+
+    var httpRequest = new XMLHttpRequest();
+    httpRequest.onreadystatechange = function(){
+        if (this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+        }
+    };
+    httpRequest.open("GET", "save.php?username="+username+"&province="+province+"&speed="+speed+"&accuracy="+accuracy, true);
+    httpRequest.send();
+    console.log("Request sent!");
 }
