@@ -49,6 +49,7 @@ function check_input(val) {
 function showResults() {
     speed = ((parWordCount/cnt) * 100).toFixed(0);
     document.getElementById('results').style.display = "block";
+    document.getElementById('background').style.display = "block";
     document.getElementById('resSpeed').innerHTML = "Your speed: " + speed + " words per minute";
     document.getElementById('resAccuracy').innerHTML = "Accuracy: " + accuracy + "%";
 }
@@ -69,6 +70,8 @@ function count() {
 
 function closeResults(){
     document.getElementById('results').style.display = "none";
+    document.getElementById('background').style.display = "none";
+
 }
 
 // highlight
@@ -98,4 +101,14 @@ function saveResults(){
     httpRequest.open("GET", "save.php?username="+username+"&province="+province+"&speed="+speed+"&accuracy="+accuracy, true);
     httpRequest.send();
     console.log("Request sent!");
+    // TODO: show score board
+    closeResults();
+}
+
+// show scoreboard
+
+function showScoreboard() {
+    document.getElementById('test').style.display = "none";
+    document.getElementById('scoreboard').style.display = "block";
+
 }
