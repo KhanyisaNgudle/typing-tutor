@@ -55,10 +55,10 @@ function showResults() {
     if (speed < 40) {
         response = "Hmmmm not bad..";
     }
-    if (speed >= 40 && speed < 50) {
+    if (speed >= 40 && speed < 60) {
         response = "Whooo that was quick";
     }
-    if (speed >= 50) {
+    if (speed >= 60) {
         response = "Jeeez!"
     }
     document.getElementById('userResults').innerHTML = "Results: " + response;
