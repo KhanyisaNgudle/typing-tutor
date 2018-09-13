@@ -21,7 +21,7 @@
                 <h1>typa_fast</h1>
             </div>
             <div class="options">
-                <a class="btn btn-primary">High Scores</a>
+                <a onclick="showScoreboard()" class="btn btn-primary">High Scores</a>
             </div>
         </div>
     </header>
@@ -30,7 +30,7 @@
     <div class="text">
         <h1>Typing</h1>
         <p>Improve your typing speed</p>
-        <a class="btn btn-primary">Start Typing</a>
+        <a onclick="showTest()" class="btn btn-primary">Start Typing</a>
     </div>
     
 </section>
@@ -46,16 +46,16 @@
             <div class="test" id="test">
             <div class="text-container">
                 <div class="question">
-                    <h5 id="question"><mark>When </mark>Henry Ford first conceived of the V8 motor</h5>
+                    <h5 id="question"></h5>
                 </div>
                 <!--side action-->
                 <div class="stats">
-                        <a class="far fa-tachometer"></a>
+                        
                     <div class="speed">
-                        <p id="speed" "far fa-tachometer">speed: 0 wpm</p>
+                        <p id="speed"><i class="far fa-keyboard"></i> speed</p>
                     </div>
                     <div class="accuracy">
-                        <p id="accuracy">accuracy: 100%</p>
+                        <p id="accuracy"><i class="fas fa-bullseye"></i> accuracy</p>
                     </div>
                 </div>
 
@@ -64,12 +64,12 @@
             <div class="input-container">
                 <textarea type="text" id="user-input" onkeyup="check_input(this)"></textarea>
                 <span>
-                    <a href="index.html" class="btn btn-primary">Restart</a>
+                    <a href="index.php" class="btn btn-primary">Restart</a>
                 </span>
             </div>
             <div class="background" id="background"></div>
             <div class="results" id="results">
-                <h1>Results</h1>
+                <h1 id="userResults">Results</h1>
                 <input maxlength="20" type="text" id="username" placeholder="Username">
                 <select id="province">
                     <option value="" disabled selected hidden>Rep your city</option>

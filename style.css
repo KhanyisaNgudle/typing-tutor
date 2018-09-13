@@ -152,11 +152,13 @@ h1 {
     padding: 10px;
     grid-area: speed;
     margin-bottom: 10px;
+    text-align: left;
 }
 
 .accuracy {
     padding: 10px;
     grid-area: accuracy;
+    text-align: left;
 }
 
 #user-input {
