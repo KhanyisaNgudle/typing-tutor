@@ -62,9 +62,9 @@
             </div>
             <!--text-container collapse-->
             <div class="input-container">
-                <textarea type="text" id="user-input" onkeyup="check_input(this)"></textarea>
+                <textarea value="" type="text" id="user-input" onkeyup="check_input(this)" placeholder="Game starts as soon as you start typing.."></textarea>
                 <span>
-                    <a href="index.php" class="btn btn-primary">Restart</a>
+                    <a href="index.html" class="btn btn-primary">Restart</a>
                 </span>
             </div>
             <div class="background" id="background"></div>
@@ -88,8 +88,8 @@
                 <p id="resSpeed">Typing Speed:</p>
                 <p id="resAccuracy">Accuracy</p>
                 <div id="btns">
-                    <a class="btn btn-primary" onclick="saveResults()" name="buttons" href="index.php">Save Results</a>
-                    <a class="btn btn-danger" onclick="closeResults()" id="close" href="index.php">Close</a>
+                    <a class="btn btn-primary" onclick="saveResults()" name="buttons" href="index.html">Save Results</a>
+                    <a class="btn btn-danger" onclick="closeResults()" id="close" href="index.html">Close</a>
                 </div>
             </div>
             </div>
@@ -107,27 +107,7 @@
             <td><select><option value="Province" disabled selected>Province</option>
             <option value="CPT">Cape Town</option><option value="JHB">Johannesburg</option><option value="DBN">Durban</option></select></td>
         </tr>
-        <?php
-        include 'connect.php';
-
-        $sql = "SELECT * FROM scoreboard";
         
-        $result = mysqli_query($conn, $sql);
-      
-           $i = 0;
-           while ($row = mysqli_fetch_array($result)) {
-               $class = ($i == 0) ? "" : "alt";
-               echo "<tr class=\"".$class."\">";
-               echo "<td>".$row['ID']."</td>";
-               echo "<td>".$row['username']."</td>";
-               echo "<td>".$row['speed']."</td>";
-               echo "<td>".$row['accuracy']."</td>";
-               echo "<td>".$row['province']."</td>";
-               echo "</tr>";
-               $i = ($i==0) ? 1:0;
-           }
-
-        ?>
     </table>
 
             </div>

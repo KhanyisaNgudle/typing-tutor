@@ -139,6 +139,13 @@ h1 {
 .question {
     grid-area: question;
     padding: 20px;
+    /* Prevent copy paste */
+    -webkit-touch-callout: none;
+    -webkit-user-select: none; 
+    -khtml-user-select: none;           
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
 }
 
 .stats {
